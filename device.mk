@@ -60,6 +60,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
+# Gcam
+PRODUCT_PACKAGES += \
+    GoogleCameraGo
+
 # Init
 PRODUCT_PACKAGES += \
     init.payton.rc
