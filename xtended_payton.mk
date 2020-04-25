@@ -14,9 +14,16 @@
 # limitations under the License.
 #
 
-# Inherit some common Lineage stuff.
+# Inherit some common Superior stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
+
+#Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Official MSM-Xtended
+XTENDED_BUILD_TYPE := OFFICIAL
+DEVICE_MAINTAINERS="Dhinesh"
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -65,7 +72,7 @@ endif
 
 # Device identifiers
 PRODUCT_DEVICE := payton
-PRODUCT_NAME := lineage_payton
+PRODUCT_NAME := xtended_payton
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto X4
 PRODUCT_MANUFACTURER := Motorola
