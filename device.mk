@@ -51,10 +51,8 @@ PRODUCT_COPY_FILES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    init.qti.fm.sh \
-    qcom.fmradio
+    FMRadio \
+    libfmjni
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
