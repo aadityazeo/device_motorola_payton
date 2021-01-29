@@ -21,9 +21,9 @@ $(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 #Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Official MSM-Xtended
-XTENDED_BUILD_TYPE := OFFICIAL
-DEVICE_MAINTAINERS="Dhinesh"
+# Official FLUIDOS
+FLUID_BUILD_TYPE := UNOFFICIAL
+DEVICE_MAINTAINERS="Aadityazeo"
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -72,7 +72,7 @@ endif
 
 # Device identifiers
 PRODUCT_DEVICE := payton
-PRODUCT_NAME := xtended_payton
+PRODUCT_NAME := fluid_payton
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto X4
 PRODUCT_MANUFACTURER := Motorola
