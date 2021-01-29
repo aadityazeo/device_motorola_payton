@@ -25,6 +25,11 @@ TARGET_BOOT_ANIMATION_RES := 1080
 FLUID_BUILD_TYPE := UNOFFICIAL
 DEVICE_MAINTAINERS="Aadityazeo"
 
+FLUID_BUILD_TYPE := OFFICIAL
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.fluid.maintainer=Aadityazeo \
+  ro.fluid.cpu=SDM630
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
