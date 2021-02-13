@@ -14,15 +14,12 @@
 # limitations under the License.
 #
 
-# Inherit some common Lineage stuff.
+# Inherit some common Dot stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/superior/config/common.mk)
+$(call inherit-product, vendor/dot/config/common.mk)
 
 #Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
-
-# Official SuperiorOS
-DEVICE_MAINTAINERS="Dhinesh"
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -71,7 +68,7 @@ endif
 
 # Device identifiers
 PRODUCT_DEVICE := payton
-PRODUCT_NAME := superior_payton
+PRODUCT_NAME := dot_payton
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto X4
 PRODUCT_MANUFACTURER := Motorola
