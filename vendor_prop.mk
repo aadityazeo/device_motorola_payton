@@ -42,5 +42,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.dev_ori=true \
     ro.vendor.sensors.sta_detect=true \
     ro.vendor.sensors.mot_detect=true \
+    
+# Blur
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.sf.blurs_are_expensive=1 \
+    ro.surface_flinger.supports_background_blur=1 \
+    debug.sf.disable_backpressure=1 \
     ro.vendor.sensors.cmc=false \
     ro.vendor.sdk.sensors.gestures=false

@@ -14,12 +14,16 @@
 # limitations under the License.
 #
 
-# Inherit some common Dot stuff.
+# Inherit some common nezuko stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/dot/config/common.mk)
+$(call inherit-product, vendor/nezuko/config/common.mk)
 
 #Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# Official build
+NEZUKO_MAINTAINER := AadityaZeo
+NEZUKO_DONATE := https://paypal.me/zeosk
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -68,7 +72,7 @@ endif
 
 # Device identifiers
 PRODUCT_DEVICE := payton
-PRODUCT_NAME := dot_payton
+PRODUCT_NAME := nezuko_payton
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto X4
 PRODUCT_MANUFACTURER := Motorola

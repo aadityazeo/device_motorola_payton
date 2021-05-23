@@ -15,10 +15,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/dot_payton.mk
+    $(LOCAL_DIR)/nezuko_payton.mk
 
 COMMON_LUNCH_CHOICES := \
-    dot_payton-user \
-    dot_payton-userdebug \
-    dot_payton-eng
+    nezuko_payton-user \
+    nezuko_payton-userdebug \
+    nezuko_payton-eng
 
