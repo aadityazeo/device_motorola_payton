@@ -21,7 +21,7 @@ $(call inherit-product, vendor/nezuko/config/common.mk)
 #Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Official build
+# Unofficial build
 NEZUKO_MAINTAINER := AadityaZeo
 NEZUKO_DONATE := https://paypal.me/zeosk
 
