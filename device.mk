@@ -15,7 +15,10 @@
 #
 
 # Vendor blobs
-$(call inherit-product, vendor/motorola/payton/payton-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/payton/payton-vendor.mk)
+
+# MotoCamera2
+$(call inherit-product-if-exists, packages/apps/MotoCamera2/motocamera2.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -29,10 +32,6 @@ PRODUCT_AAPT_PREF_CONFIG := 560dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Audio
-PRODUCT_PACKAGES += \
-    audio.primary.sdm660 \
-    libqcompostprocbundle
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
@@ -44,6 +43,9 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
+# Dex-pre-opt exclusions
+$(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
+
 # Fingerprint Gestures
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
@@ -53,6 +55,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
+    init.qti.fm.sh \
     qcom.fmradio
 
 PRODUCT_BOOT_JARS += qcom.fmradio
@@ -81,6 +84,8 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     SecureElement \
     NfcNci \
+    nqnfcee_access.xml \
+    nqnfcse_access.xml \
     Tag
 
 PRODUCT_COPY_FILES += \
@@ -119,3 +124,4 @@ $(call inherit-product, device/motorola/sdm660-common/common.mk)
 
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
+

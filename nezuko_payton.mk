@@ -14,16 +14,16 @@
 # limitations under the License.
 #
 
-# Inherit some common xtended stuff.
+# Inherit some common nezuko stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
+$(call inherit-product, vendor/nezuko/config/common.mk)
 
 #Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Official MSM-Xtended
-XTENDED_BUILD_TYPE := OFFICIAL
-XTENDED_BUILD_MAINTAINER := Dhinesh
+# Official build
+NEZUKO_MAINTAINER := AadityaZeo
+NEZUKO_DONATE := https://paypal.me/zeosk
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -72,7 +72,7 @@ endif
 
 # Device identifiers
 PRODUCT_DEVICE := payton
-PRODUCT_NAME := xtended_payton
+PRODUCT_NAME := nezuko_payton
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto X4
 PRODUCT_MANUFACTURER := Motorola
@@ -81,4 +81,5 @@ PRODUCT_RELEASE_NAME := payton
 PRODUCT_BUILD_PROP_OVERRIDES += \
         PRODUCT_NAME=payton
 
-BUILD_FINGERPRINT := motorola/payton/payton:8.0.0/OPWS27.57-25-6-10/12:user/release-keys
+BUILD_FINGERPRINT := "google/coral/coral:11/RQ2A.210505.002/7246365:user/release-keys"
+
