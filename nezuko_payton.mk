@@ -25,6 +25,9 @@ TARGET_BOOT_ANIMATION_RES := 1080
 NEZUKO_MAINTAINER := AadityaZeo
 NEZUKO_DONATE := https://paypal.me/zeosk
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.nezuko.cpu=SDM630
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
