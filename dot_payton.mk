@@ -20,6 +20,7 @@ $(call inherit-product, vendor/dot/config/common.mk)
 
 #Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
+WITH_GAPPS := true
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -77,4 +78,4 @@ PRODUCT_RELEASE_NAME := payton
 PRODUCT_BUILD_PROP_OVERRIDES += \
         PRODUCT_NAME=payton
 
-BUILD_FINGERPRINT := "google/coral/coral:11/RQ2A.210505.002/7246365:user/release-keys"
+BUILD_FINGERPRINT := "google/coral/coral:11/RQ3A.210605.005/7349499:user/release-keys"
