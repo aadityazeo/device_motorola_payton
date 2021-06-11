@@ -20,7 +20,6 @@ $(call inherit-product, vendor/dot/config/common.mk)
 
 #Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
-WITH_GAPPS := true
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
