@@ -39,6 +39,7 @@ BOARD_HAS_QCA_FM_SOC := "cherokee"
 
 # Kernel
 TARGET_KERNEL_CONFIG := cybertron_payton_defconfig
+TARGET_PREBUILT_RECOVERY_RAMDISK := $(DEVICE_PATH)/twrp/ramdisk-recovery.cpio.gz
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/touch.xml
