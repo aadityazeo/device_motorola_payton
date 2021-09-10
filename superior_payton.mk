@@ -73,4 +73,4 @@ PRODUCT_RELEASE_NAME := payton
 PRODUCT_BUILD_PROP_OVERRIDES += \
         PRODUCT_NAME=payton
 
-BUILD_FINGERPRINT := "google/coral/coral:11/RQ3A.210805.001.A1/7474174:user/release-keys"
+BUILD_FINGERPRINT := "google/coral/coral:11/RQ3A.210905.001/7511028:user/release-keys"
